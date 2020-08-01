@@ -10,7 +10,8 @@ const forecast = (latitude, longitude, callback) => {
             callback('Unable to fetch location.Try another search', undefined)
         }
         else {
-            callback(undefined, `${body.current.weather_descriptions[0]} It is currently ${body.current.temperature} degress out.it feels like  ${body.current.feelslike}  degress out`)
+            console.log(body)
+            callback(undefined, `${body.current.weather_descriptions[0]} It is currently ${body.current.temperature} degress out.it feels like  ${body.current.feelslike}  degress out high. Cloudcover in the sky is ${body.current.cloudcover}. Pressure in temperature is ${body.current.pressure}. Wind direction towards ${body.current.wind_dir}`)
         }
     })
 
